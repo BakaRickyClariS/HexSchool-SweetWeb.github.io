@@ -19,40 +19,6 @@ class Footer extends HTMLElement {
                 <li><a href="#/problem">常見問題</a></li>
               </ul>
             </div>
-            <div class="flex flex-col space-y-5 pb-10 md:pt-5">
-              <div class="flex flex-row space-x-5">
-                <img
-                  class="h-[48px]"
-                  src="images/ic-footer-tel.svg"
-                  alt="tel"
-                />
-                <h1 class="text-4xl">0800-000-00</h1>
-              </div>
-              <div class="flex flex-row space-x-5">
-                <img
-                  class="h-[48px]"
-                  src="images/ic-footer-mail.svg"
-                  alt="tel"
-                />
-                <h1 class="text-4xl">glasses@business.com</h1>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-row space-x-5 lg:space-x-10 xl:space-x-15">
-            <img
-              class="h-[48px]"
-              src="images/ic-social-fb.png"
-              alt="Facebook"
-            /><img
-              class="h-[48px]"
-              src="images/ic_social_ig.png"
-              alt="Instagram"
-            /><img
-              class="h-[48px]"
-              src="images/ic_social_line.png"
-              alt="Line"
-            />
           </div>
         </div>
         <div class="py-10 flex flex-col md:flex-row md:justify-between">
