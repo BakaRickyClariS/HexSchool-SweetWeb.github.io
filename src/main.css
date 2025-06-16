@@ -272,6 +272,9 @@
   .bg-\[\#AA0601\] {
     background-color: #AA0601;
   }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }

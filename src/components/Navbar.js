@@ -24,7 +24,7 @@ class Navbar extends HTMLElement {
           </div>
           <div class="flex md:w-full items-center">
             <div class="flex items-center md:hidden">
-              <a class="px-5 py-5" href="#/">
+              <a class="px-5 py-5 hover:bg-[#3F5D45]" href="#/">
                 <img
                   class="w-[48px] h-auto"
                   src="src/assets/images/dehaze-24px.png"
@@ -63,7 +63,7 @@ class Navbar extends HTMLElement {
           </div>
         </div>
         <div class="flex">
-          <a class="px-5 py-5 md:px-0" href="#/cart" alt="cart"
+          <a class="p-5 hover:bg-[#3F5D45]" href="#/cart" alt="cart"
             ><img
               class="w-[48px] h-auto md:max-w-[24px]"
               src="src/assets/images/shopping_cart.png"
