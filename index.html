@@ -5,11 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
     <link rel="stylesheet" type="text/css" href="./src/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Sweetaste</title>
   </head>
   <body>
     <my-navbar></my-navbar>
-    <div id="outlet"></div>
+    <!-- <div id="outlet"></div> -->
+
+    <main>
+      <section class="flex flex-col w-full items-center md:pb-80">
+        <div
+          class="flex flex-col max-w-screen-xl mx-auto w-full md:px-10 relative justify-center items-center"
+        >
+          <img
+            class="object-cover"
+            src="https://images.unsplash.com/photo-1473256599800-b48c7c88cd7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae0d68ab0db4ee79bdce92722b31112b&auto=format&fit=crop&w=2725&q=80"
+            alt=""
+          />
+          <div
+            class="grid grid-rows-3 w-full [writing-mode:vertical-rl] gap-[1px] min-h-[250px] md:gap-0 md:absolute md:bottom-[-250px] md:max-w-5xl text-4xl md:text-3xl md:min-h-[450px] font-bold md:p-10"
+          >
+            <a
+              class="block bg-[#3F5D45] text-white flex items-center justify-center p-10"
+            >
+              <h1>新品上市</h1>
+            </a>
+            <a
+              class="block bg-[#3F5D45] text-white flex items-center justify-center p-10"
+            >
+              <h1>人氣推薦</h1>
+            </a>
+
+            <a
+              class="block bg-[#FFE180] text-[#3F5D45] flex items-center justify-center p-10"
+            >
+              <h1>本日精選</h1>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="bg-[#EAF0ED] flex w-full md:max-h-[400px]">
+        <ul
+          class="flex flex-col md:flex-row items-center md:justify-center max-w-screen-xl mx-auto w-full md:px-10 md:gap-0"
+        >
+          <li
+            class="w-full py-10 md:py-0 md:order-3 text-center md:text-left md:flex md:justify-end md:mt-0 md:w-1/6 md:pl-5"
+          >
+            <h1
+              class="md:relative md:[writing-mode:vertical-rl] md:[text-orientation:upright] font-bold text-4xl leading-[50px] text-[#3F5D45]"
+              style="font-family: 'Noto Serif TC', serif"
+            >
+              <span
+                class="md:absolute md:top-[-240px] md:h-[400px] md:w-[400px]"
+              >
+                為什麼<span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
+                  <span class="inline-block rotate-90 md:rotate-0">|</span>
+                  <span class="inline-block rotate-90 md:rotate-0"
+                    >|</span
+                  > </span
+                ><br />&nbsp;選擇了做甜點?</span
+              >
+            </h1>
+          </li>
+          <li class="w-full md:order-1 md:w-3/6">
+            <img
+              class="object-cover w-full md:max-w-[500px] aspect-square md:min-h-[400px]"
+              src="https://images.unsplash.com/photo-1519730722595-a5ff788dea4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2712a33fe9b13532f0682ac4e1e749b8&auto=format&fit=crop&w=600&q=60"
+              alt=""
+            />
+          </li>
+          <li class="md:order-2 w-full md:w-2/6">
+            <p
+              class="md:[writing-mode:vertical-rl] md:[text-orientation:upright] md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
+            >
+              青山依舊在，幾度夕陽紅。慣看秋月春風。<br />
+              一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              古今多少事，都付笑談中。<br />
+              <br />
+              是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              樵江渚上，古今多少事，都付笑談中。
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </main>
+
     <my-footer></my-footer>
     <script type="module" src="./src/main.js"></script>
   </body>
