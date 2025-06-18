@@ -3,3 +3,9 @@
 * {
   box-sizing: border-box;
 }
+
+@layer {
+  .flex-box {
+    @apply border border-gray-200 rounded-md p-2;
+  }
+}

@@ -1,6 +1,12 @@
 class Home extends HTMLElement {
   constructor() {
     super();
+    const info = [
+      {
+        title: "新品上市",
+        img: "https://images.unsplash.com/photo-1499638472904-ea5c6178a300?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c27da96f7150c96a92ba8a53c8644761&auto=format&fit=crop&w=600&q=60",
+      },
+    ];
     this.innerHTML = `
     <main class="flex flex-col w-full md:gap-[150px]">
       <section class="flex flex-col w-full items-center md:pb-40">
@@ -157,12 +163,8 @@ class Home extends HTMLElement {
         </div>
       </section>
       <section class="flex w-full max-w-screen-xl mx-auto">
-        <ul
-          class="flex w-full flex-col md:flex-row md:flex-wrap gap-10 px-10 pb-10 md:pb-20"
-        >
-          <li
-            class="flex w-full flex-col text-center text-[#3F5D45] md:max-w-[500px]"
-          >
+        <ul class="flex w-full flex-col md:flex-row gap-5 px-10 pb-10 md:pb-20">
+          <li class="flex w-full flex-col text-center text-[#3F5D45] md:w-1/3">
             <div class="relative w-full">
               <img
                 class="object-cover w-full aspect-square"
@@ -190,7 +192,87 @@ class Home extends HTMLElement {
               class="flex flex-col w-full divide-y-1 divide-gray-200 border-1 border-gray-200"
             >
               <div
-                class="flex flex-row w-full divide-x-1 divide-gray-200 text-3xl items-center"
+                class="flex flex-row w-full divide-x-1 divide-gray-200 text-3xl md:text-2xl items-center"
+              >
+                <h1 class="p-5 w-3/5">焦糖瑪卡龍</h1>
+                <h1 class="p-5 w-2/5 font-bold">NT$ 450</h1>
+              </div>
+              <div class="flex w-full text-4xl font-bold">
+                <button class="py-8 bg-[#EAF0ED] flex w-full justify-center">
+                  加入購物車
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="flex w-full flex-col text-center text-[#3F5D45] md:w-1/3">
+            <div class="relative w-full">
+              <img
+                class="object-cover w-full aspect-square"
+                src="https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c376ffa487bcd258df29dc881b10703&auto=format&fit=crop&w=700&q=60"
+                alt=""
+              />
+              <div class="absolute top-0 left-8 p-5 bg-[#3F5D45] text-white">
+                <h1
+                  class="[writing-mode:vertical-rl] [text-orientation:upright] font-bold text-2xl"
+                >
+                  本日精選
+                </h1>
+              </div>
+              <div class="absolute top-5 right-8">
+                <button>
+                  <img
+                    class="w-10"
+                    src="src/assets/images/favorite_border.png"
+                    alt="favorite"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full divide-y-1 divide-gray-200 border-1 border-gray-200"
+            >
+              <div
+                class="flex flex-row w-full divide-x-1 divide-gray-200 text-3xl md:text-2xl items-center"
+              >
+                <h1 class="p-5 w-3/5">焦糖瑪卡龍</h1>
+                <h1 class="p-5 w-2/5 font-bold">NT$ 450</h1>
+              </div>
+              <div class="flex w-full text-4xl font-bold">
+                <button class="py-8 bg-[#EAF0ED] flex w-full justify-center">
+                  加入購物車
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="flex w-full flex-col text-center text-[#3F5D45] md:w-1/3">
+            <div class="relative w-full">
+              <img
+                class="object-cover w-full aspect-square"
+                src="https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c376ffa487bcd258df29dc881b10703&auto=format&fit=crop&w=700&q=60"
+                alt=""
+              />
+              <div class="absolute top-0 left-8 p-5 bg-[#3F5D45] text-white">
+                <h1
+                  class="[writing-mode:vertical-rl] [text-orientation:upright] font-bold text-2xl"
+                >
+                  本日精選
+                </h1>
+              </div>
+              <div class="absolute top-5 right-8">
+                <button>
+                  <img
+                    class="w-10"
+                    src="src/assets/images/favorite_border.png"
+                    alt="favorite"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full divide-y-1 divide-gray-200 border-1 border-gray-200"
+            >
+              <div
+                class="flex flex-row w-full divide-x-1 divide-gray-200 text-3xl md:text-2xl items-center"
               >
                 <h1 class="p-5 w-3/5">焦糖瑪卡龍</h1>
                 <h1 class="p-5 w-2/5 font-bold">NT$ 450</h1>
