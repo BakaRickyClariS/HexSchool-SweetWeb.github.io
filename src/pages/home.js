@@ -2,12 +2,209 @@ class Home extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
-    <home-main></home-main>
-    <home-intro></home-intro>
-    <home-classic></home-classic>
-    <home-design></home-design>
-    <home-recommend></home-recommend>
-    <home-contact></home-contact>
+    <main class="flex flex-col w-full md:gap-[150px]">
+      <section class="flex flex-col w-full items-center md:pb-40">
+        <div
+          class="flex flex-col max-w-screen-xl mx-auto w-full md:px-10 relative justify-center items-center"
+        >
+          <img
+            class="object-cover"
+            src="https://images.unsplash.com/photo-1473256599800-b48c7c88cd7e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae0d68ab0db4ee79bdce92722b31112b&auto=format&fit=crop&w=2725&q=80"
+            alt=""
+          />
+          <ul
+            class="grid grid-rows-3 w-full [writing-mode:vertical-rl] gap-[1px] min-h-[250px] md:gap-0 md:absolute md:bottom-[-250px] md:max-w-5xl text-4xl md:text-3xl md:min-h-[450px] font-bold md:p-10"
+          >
+            <li
+              class="block bg-[url('https://images.unsplash.com/photo-1499638472904-ea5c6178a300?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c27da96f7150c96a92ba8a53c8644761&auto=format&fit=crop&w=600&q=60')] bg-cover bg-center text-white flex items-center justify-center"
+            >
+              <a
+                href=""
+                class="bg-[#3F5D45]/70 backdrop-blur-sm hover:bg-[#3F5D45] w-full h-full p-10 block flex justify-center items-center"
+              >
+                新品上市
+              </a>
+            </li>
+            <li
+              class="block bg-[url('https://images.unsplash.com/photo-1504114133367-631ecd3db3ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b75e93d90cd88467ae5715becb431a26&auto=format&fit=crop&w=600&q=60')] bg-cover bg-center text-white flex items-center justify-center"
+            >
+              <a
+                href=""
+                class="bg-[#3F5D45]/70 backdrop-blur-sm hover:bg-[#3F5D45] w-full h-full p-10 block flex justify-center items-center"
+              >
+                人氣推薦
+              </a>
+            </li>
+
+            <li
+              class="block bg-[url('https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60')] bg-cover bg-center text-[#3F5D45] flex items-center justify-center"
+            >
+              <a
+                href=""
+                class="bg-[#FFE180]/70 backdrop-blur-sm hover:bg-[#FFE180] w-full h-full p-10 block flex justify-center items-center"
+              >
+                本日精選
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="bg-[#EAF0ED] flex w-full md:max-h-[400px]">
+        <ul
+          class="flex flex-col md:flex-row items-center md:justify-center max-w-screen-xl mx-auto w-full md:px-10 md:gap-0"
+        >
+          <li
+            class="w-full py-10 md:py-0 md:order-3 text-center md:text-left md:flex md:justify-end md:mt-0 md:w-1/6 md:pl-5 bg-white"
+          >
+            <h1
+              class="md:relative md:[writing-mode:vertical-rl] md:[text-orientation:upright] font-bold text-4xl leading-[50px] text-[#3F5D45]"
+              style="font-family: 'Noto Serif TC', serif"
+            >
+              <span
+                class="md:absolute md:top-[-240px] md:h-[400px] md:w-[400px]"
+              >
+                為什麼<span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
+                  <span class="inline-block rotate-90 md:rotate-0">|</span>
+                  <span class="inline-block rotate-90 md:rotate-0"
+                    >|</span
+                  > </span
+                ><br />&nbsp;選擇了做甜點?</span
+              >
+            </h1>
+          </li>
+          <li class="w-full md:order-1 md:w-3/6">
+            <img
+              class="object-cover w-full md:max-w-[500px] aspect-square md:min-h-[400px]"
+              src="https://images.unsplash.com/photo-1519730722595-a5ff788dea4d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2712a33fe9b13532f0682ac4e1e749b8&auto=format&fit=crop&w=600&q=60"
+              alt=""
+            />
+          </li>
+          <li class="md:order-2 w-full md:w-2/6">
+            <p
+              class="md:[writing-mode:vertical-rl] md:[text-orientation:upright] md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
+            >
+              青山依舊在，幾度夕陽紅。慣看秋月春風。<br />
+              一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              古今多少事，都付笑談中。<br />
+              <br />
+              是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              樵江渚上，古今多少事，都付笑談中。
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="bg-[#EAF0ED] flex w-full md:max-h-[400px]">
+        <ul
+          class="flex flex-col md:flex-row items-center md:justify-center max-w-screen-xl mx-auto w-full md:px-10 md:gap-0"
+        >
+          <li
+            class="w-full py-10 md:py-0 md:order-2 text-center md:text-left md:flex md:justify-end md:mt-0 md:w-1/6 md:pl-5 bg-white"
+          >
+            <h1
+              class="md:relative md:[writing-mode:vertical-rl] md:[text-orientation:upright] font-bold text-4xl md:pr-10 leading-[50px] text-[#3F5D45]"
+              style="font-family: 'Noto Serif TC', serif"
+            >
+              <span
+                class="md:absolute md:top-[-240px] md:h-[400px] md:w-[400px]"
+              >
+                為什麼<span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
+                  <span class="inline-block rotate-90 md:rotate-0">|</span>
+                  <span class="inline-block rotate-90 md:rotate-0"
+                    >|</span
+                  > </span
+                ><br />&nbsp;一定要吃甜點?</span
+              >
+            </h1>
+          </li>
+          <li class="w-full md:order-3 md:w-3/6">
+            <img
+              class="object-cover w-full md:max-w-[500px] aspect-square md:min-h-[400px]"
+              src="https://images.unsplash.com/photo-1501432781167-c0ccfd492297?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=621c4e9986fba1c4514dfdc30e095bd2&auto=format&fit=crop&w=600&q=60"
+              alt=""
+            />
+          </li>
+          <li class="md:order-1 w-full md:w-2/6">
+            <p
+              class="md:[writing-mode:vertical-rl] md:[text-orientation:upright] md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
+            >
+              青山依舊在，幾度夕陽紅。慣看秋月春風。<br />
+              一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              古今多少事，都付笑談中。<br />
+              <br />
+              是非成敗轉頭空，滾滾長江東逝水，白髮漁樵江渚上，古今多少事，都付笑談中。<br />
+              樵江渚上，古今多少事，都付笑談中。
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="flex w-full">
+        <div
+          class="w-full py-10 md:py-0 text-center md:text-left flex justify-center"
+        >
+          <h1
+            class="md:[writing-mode:vertical-rl] md:[text-orientation:upright] font-bold text-4xl leading-[50px] text-[#3F5D45]"
+            style="font-family: 'Noto Serif TC', serif"
+          >
+            <span>
+              想吃甜點<span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
+                <span class="inline-block rotate-90 md:rotate-0">|</span>
+                <span class="inline-block rotate-90 md:rotate-0">|</span> </span
+              ><br />&nbsp;是不需要理由的。</span
+            >
+          </h1>
+        </div>
+      </section>
+      <section class="flex w-full max-w-screen-xl mx-auto">
+        <ul
+          class="flex w-full flex-col md:flex-row md:flex-wrap gap-10 px-10 pb-10 md:pb-20"
+        >
+          <li
+            class="flex w-full flex-col text-center text-[#3F5D45] md:max-w-[500px]"
+          >
+            <div class="relative w-full">
+              <img
+                class="object-cover w-full aspect-square"
+                src="https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c376ffa487bcd258df29dc881b10703&auto=format&fit=crop&w=700&q=60"
+                alt=""
+              />
+              <div class="absolute top-0 left-8 p-5 bg-[#3F5D45] text-white">
+                <h1
+                  class="[writing-mode:vertical-rl] [text-orientation:upright] font-bold text-2xl"
+                >
+                  本日精選
+                </h1>
+              </div>
+              <div class="absolute top-5 right-8">
+                <button>
+                  <img
+                    class="w-10"
+                    src="src/assets/images/favorite_border.png"
+                    alt="favorite"
+                  />
+                </button>
+              </div>
+            </div>
+            <div
+              class="flex flex-col w-full divide-y-1 divide-gray-200 border-1 border-gray-200"
+            >
+              <div
+                class="flex flex-row w-full divide-x-1 divide-gray-200 text-3xl items-center"
+              >
+                <h1 class="p-5 w-3/5">焦糖瑪卡龍</h1>
+                <h1 class="p-5 w-2/5 font-bold">NT$ 450</h1>
+              </div>
+              <div class="flex w-full text-4xl font-bold">
+                <button class="py-8 bg-[#EAF0ED] flex w-full justify-center">
+                  加入購物車
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
     `;
   }
 }
