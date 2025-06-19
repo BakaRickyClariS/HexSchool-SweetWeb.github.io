@@ -19,7 +19,7 @@ customElements.define("my-home", Home);
 customElements.define("my-products", Products);
 // customElements.define("my-location", Location);
 // customElements.define("my-problem", Problem);
-// customElements.define("my-blog", Blog);
+// customElements.define("my-blog", Blog);----
 
 // 路由初始化
 const router = new SimpleRouter("outlet");
