@@ -8,11 +8,11 @@ class ProductItem extends HTMLElement {
   }
   render() {
     this.innerHTML = `
-          <ul class="flex-colBox md:flex-row gap-5 px-10 pb-10 md:pb-20">
+          <ul class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
         ${this.itemInfo
           .map(
             (item) => `
-          <li class="flex-colBox text-center text-[#3F5D45] md:w-1/3">
+          <li class="flex-colBox text-center text-[#3F5D45]">
             <div class="relative w-full">
               <img
                 class="w-full aspect-square"

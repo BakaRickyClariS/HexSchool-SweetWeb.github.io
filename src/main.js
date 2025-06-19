@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.js";
 import Footer from "./components/Footer.js";
 // import Pagination from "./components/Pagination.js";
 import Home from "./pages/home.js";
+import Products from "./pages/products.js";
 // import Shop from "./pages/shop.js";
 // import Location from "./pages/location.js";
 // import Problem from "./pages/problem.js";
@@ -15,7 +16,7 @@ customElements.define("my-footer", Footer);
 
 // 頁面註冊
 customElements.define("my-home", Home);
-// customElements.define("my-shop", Shop);
+customElements.define("my-products", Products);
 // customElements.define("my-location", Location);
 // customElements.define("my-problem", Problem);
 // customElements.define("my-blog", Blog);
@@ -24,7 +25,7 @@ customElements.define("my-home", Home);
 const router = new SimpleRouter("outlet");
 router.addRoute("/", "my-home");
 // router.addRoute("/problem", "my-problem");
-// router.addRoute("/shop", "my-shop");
+router.addRoute("/products", "my-products");
 // router.addRoute("/shop/optical", "my-shop");
 // router.addRoute("/shop/sunglasses", "my-shop");
 // router.addRoute("/shop/functional", "my-shop");

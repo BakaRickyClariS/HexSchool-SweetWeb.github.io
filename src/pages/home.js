@@ -168,7 +168,9 @@ class Home extends HTMLElement {
         </div>
       </section>
       <section class="max-w-content">
-        <product-item itemInfo='${JSON.stringify(shopInfo)}'></product-item>
+        <product-item class="px-10 pb-20" itemInfo='${JSON.stringify(
+          shopInfo
+        )}'></product-item>
       </section>
     </main>
     `;

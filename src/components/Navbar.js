@@ -46,8 +46,8 @@ class Navbar extends HTMLElement {
               <li class="w-full h-full">
                 <a
                   class="h-full py-5 block w-full hover:text-white hover:bg-[#3F5D45]"
-                  href="#/shop"
-                  alt="shop"
+                  href="#/products"
+                  alt="products"
                   >甜點</a
                 >
               </li>
