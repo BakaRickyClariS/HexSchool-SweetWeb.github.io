@@ -4,8 +4,40 @@
   box-sizing: border-box;
 }
 
-@layer {
-  .flex-box {
-    @apply border border-gray-200 rounded-md p-2;
+@layer components {
+  section {
+    @apply flex w-full;
+  }
+  img {
+    @apply object-cover;
+  }
+  .flex-colBox {
+    @apply flex flex-col w-full;
+  }
+  .flex-rowBox {
+    @apply flex flex-row w-full;
+  }
+  .max-w-content {
+    @apply max-w-screen-xl mx-auto;
+  }
+  .flex-boxCenter {
+    @apply items-center justify-center;
+  }
+  @media (min-width: 768px) {
+    .vlText-md {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+  }
+  .vlText {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+  .custom-title {
+    font-family: "Noto Serif TC", serif;
+    @apply font-bold text-4xl leading-[50px] text-[#3F5D45];
+  }
+  .custom-title-rotate {
+    @apply inline-block rotate-90 md:rotate-0;
   }
 }
