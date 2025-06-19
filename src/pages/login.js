@@ -7,7 +7,7 @@ class Login extends HTMLElement {
         <h1 class="text-3xl">會員登入</h1>
       </li>
       <li class="flex-colBox text-[#8DA291] flex-boxCenter bg-[#EAF0ED]">
-        <h1 class="text-3xl block">—— 連結社群帳號tt ——</h1>
+        <h1 class="text-3xl block">—— 連結社群帳號tttt ——</h1>
         <img src="src/assets/images/ic-facebook-logotype@2x.png" alt="" />
         <img src="src/assets/images/ic-google@2x.png" alt="" />
         <img src="src/assets/images/ic-yahoo@2x.png" alt="" />
