@@ -40,4 +40,56 @@
   .custom-title-rotate {
     @apply inline-block rotate-90 md:rotate-0;
   }
+  .home-title-y {
+    background-color: rgba(255, 225, 128, 0.7);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-title-y:hover {
+    background-color: #ffe180;
+  }
+  .home-title-g {
+    background-color: rgba(63, 93, 69, 0.7);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-title-g:hover {
+    background-color: #3f5d45;
+  }
+  @media (min-width: 768px) {
+    .md-order-1 {
+      order: 1;
+    }
+    .md-order-2 {
+      order: 2;
+    }
+    .md-order-3 {
+      order: 3;
+    }
+    .md-order-4 {
+      order: 4;
+    }
+    .md-order-5 {
+      order: 5;
+    }
+    .md-order-6 {
+      order: 6;
+    }
+    .md-order-7 {
+      order: 7;
+      order: ;
+    }
+  }
 }

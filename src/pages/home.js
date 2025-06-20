@@ -6,19 +6,19 @@ class Home extends HTMLElement {
       {
         title: "新品上市",
         img: "https://images.unsplash.com/photo-1499638472904-ea5c6178a300?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c27da96f7150c96a92ba8a53c8644761&auto=format&fit=crop&w=600&q=60",
-        bgc: "#3F5D45",
+        bgc: "home-title-g",
         link: "",
       },
       {
         title: "人氣推薦",
         img: "https://images.unsplash.com/photo-1504114133367-631ecd3db3ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b75e93d90cd88467ae5715becb431a26&auto=format&fit=crop&w=600&q=60",
-        bgc: "#3F5D45",
+        bgc: "home-title-g",
         link: "",
       },
       {
         title: "本日精選",
         img: "https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60",
-        bgc: "#FFE180",
+        bgc: "home-title-y",
         link: "",
       },
     ];
@@ -114,11 +114,16 @@ class Home extends HTMLElement {
             .map(
               (item) => `
             <li
-              class="block bg-[url('${item.img}')] bg-cover bg-center text-white flex flex-boxCenter"
+              class="text-white flex flex-boxCenter"
+              style="
+                  background-image: url('${item.img}');
+                  background-size: cover;
+                  background-position: center;
+                "
             >
               <a
                 href="${item.link}"
-                class="bg-[${item.bgc}]/70 backdrop-blur-sm hover:bg-[${item.bgc}] w-full h-full p-10 block flex flex-boxCenter"
+                class="${item.bgc}"
               >
                 ${item.title}
               </a>
@@ -136,20 +141,20 @@ class Home extends HTMLElement {
           class="flex-colBox md:flex-row flex-boxCenter max-w-content md:px-10 md:gap-0"
         >
           <li
-            class="w-full py-10 md:py-0 md:order-${
+            class="w-full py-10 md:py-0 md-order-${
               item.order[0]
             } text-center md:text-left md:flex md:justify-end md:mt-0 md:w-1/6 md:pl-5 bg-white"
           >
           ${vlTextHtml(vlText, i)}
           </li>
-          <li class="w-full md:order-${item.order[1]} md:w-3/6">
+          <li class="w-full md-order-${item.order[1]} md:w-3/6">
             <img
               class="w-full md:max-w-[500px] aspect-square md:min-h-[400px]"
               src="${item.img}"
               alt=""
             />
           </li>
-          <li class="md:order-${item.order[2]} w-full md:w-2/6">
+          <li class="md-order-${item.order[2]} w-full md:w-2/6">
             <p
               class="vlText-md md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
             >
