@@ -39,6 +39,7 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --font-weight-black: 900;
+    --blur-sm: 8px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -251,12 +252,6 @@
   .h-\[80px\] {
     height: 80px;
   }
-  .h-\[150px\] {
-    height: 150px;
-  }
-  .h-\[200px\] {
-    height: 200px;
-  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -265,18 +260,6 @@
   }
   .h-full {
     height: 100%;
-  }
-  .max-h-\[50px\] {
-    max-height: 50px;
-  }
-  .max-h-\[80px\] {
-    max-height: 80px;
-  }
-  .max-h-\[100px\] {
-    max-height: 100px;
-  }
-  .max-h-\[150px\] {
-    max-height: 150px;
   }
   .max-h-\[763px\] {
     max-height: 763px;
@@ -287,14 +270,8 @@
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
-  }
   .w-2 {
     width: calc(var(--spacing) * 2);
-  }
-  .w-2\/3 {
-    width: calc(2/3 * 100%);
   }
   .w-2\/5 {
     width: calc(2/5 * 100%);
@@ -329,14 +306,8 @@
   .w-full {
     width: 100%;
   }
-  .max-w-\[105px\] {
-    max-width: 105px;
-  }
   .max-w-\[150px\] {
     max-width: 150px;
-  }
-  .max-w-\[205px\] {
-    max-width: 205px;
   }
   .max-w-\[400px\] {
     max-width: 400px;
@@ -483,6 +454,12 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
   .object-contain {
     object-fit: contain;
   }
@@ -512,6 +489,9 @@
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
   }
   .py-7 {
     padding-block: calc(var(--spacing) * 7);
@@ -611,6 +591,11 @@
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-blur-sm {
+    --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
   .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
@@ -806,11 +791,6 @@
       max-width: 24px;
     }
   }
-  .md\:max-w-\[150px\] {
-    @media (width >= 48rem) {
-      max-width: 150px;
-    }
-  }
   .md\:max-w-\[400px\] {
     @media (width >= 48rem) {
       max-width: 400px;
@@ -864,11 +844,6 @@
   .md\:gap-\[150px\] {
     @media (width >= 48rem) {
       gap: 150px;
-    }
-  }
-  .md\:object-cover {
-    @media (width >= 48rem) {
-      object-fit: cover;
     }
   }
   .md\:p-10 {

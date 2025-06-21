@@ -61,7 +61,7 @@ class Login extends HTMLElement {
             </fieldset>
             <button
               type="submit"
-              class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-3 px-6 transition-colors"
+              class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-6 px-6 transition-colors"
             >
               登入帳號
             </button>
