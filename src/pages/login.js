@@ -3,10 +3,18 @@ class Login extends HTMLElement {
     super();
     this.innerHTML = `
     <ul class="grid grid-cols-1 md:grid-cols-2 items-center max-w-screen-lg mx-auto text-center py-15">
-      <li class="flex-colBox text-[#8DA291] flex-boxCenter bg-[#3F5D45]">
+    <li class="flex-colBox text-[#8DA291] flex-boxCenter bg-[#3F5D45] md:hidden"><h1 class="text-5xl text-white font-bold block w-full py-5">會員登入</h1></li>
+      
+      <li class="flex-rowBox md:flex-col text-[#8DA291] flex-boxCenter bg-[#EAF0ED] p-10 md:gap-5 divide-x-1 divide-gray-200 md:order-3">
+        <h1 class="hidden md:block text-3xl p-5">—— 連結社群帳號 ——</h1>
+        <button class="p-5 flex flex-boxCenter bg-white w-full h-[80px] hover:invert"><img class=" w-full flex object-cover md:w-1/2" src="src/assets/images/ic-facebook-logotype@2x.png" alt="facebook" /></button>
+        <button class="p-5 flex flex-boxCenter bg-white w-full h-[80px] hover:invert"><img class=" w-full flex object-cover md:w-1/2" src="src/assets/images/ic-google@2x.png" alt="google" /></button>
+        <button class="p-5 flex flex-boxCenter bg-white w-full h-[80px] hover:invert"><img class=" w-full flex object-cover md:w-1/2" src="src/assets/images/ic-yahoo@2x.png" alt="yahoo" /></button>
+      </li>
+      <li class="flex-colBox text-[#8DA291] flex-boxCenter bg-[#3F5D45] md:order-2">
         <form class="space-y-6 w-full">
             <fieldset class="space-y-6 text-2xl p-10">
-              <h1 class="text-5xl text-white font-bold block w-full py-5">會員登入</h1>
+              <h1 class="text-5xl text-white font-bold hidden w-full py-5 md:block">會員登入</h1>
               <div class="flex-rowBox bg-[#EAF0ED] p-5 items-center gap-5">
                 <label
                   for="email"
@@ -53,19 +61,12 @@ class Login extends HTMLElement {
             </fieldset>
             <button
               type="submit"
-              class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-3 px-6 transition-colors"
+              class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-6 px-6 transition-colors"
             >
               登入帳號
             </button>
           </form>
       </li>
-      <li class="flex-colBox text-[#8DA291] flex-boxCenter bg-[#EAF0ED] p-10 gap-5">
-        <h1 class="hidden md:block text-3xl p-5">—— 連結社群帳號 ——</h1>
-        <button class="p-5 flex flex-boxCenter bg-white w-full hover:invert"><img class="max-w-[150px]" src="src/assets/images/ic-facebook-logotype@2x.png" alt="facebook" /></button>
-        <button class="p-5 flex flex-boxCenter bg-white w-full hover:invert"><img class="max-w-[150px]" src="src/assets/images/ic-google@2x.png" alt="google" /></button>
-        <button class="p-5 flex flex-boxCenter bg-white w-full hover:invert"><img class="max-w-[150px]" src="src/assets/images/ic-yahoo@2x.png" alt="yahoo" /></button>
-      </li>
-      
     </ul>
     `;
   }
