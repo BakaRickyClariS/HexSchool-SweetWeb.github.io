@@ -6,7 +6,7 @@ class Login extends HTMLElement {
       <li class="flex-colBox text-[#8DA291] flex-boxCenter bg-[#3F5D45]">
         <form class="space-y-6 w-full">
             <fieldset class="space-y-6 text-2xl p-10">
-              <h1 class="text-5xl text-white font-bold block w-full py-5">會員登入</h1>
+              <h1 class="text-5xl text-white font-bold block w-full py-5 ">會員登入</h1>
               <div class="flex-rowBox bg-[#EAF0ED] p-5 items-center gap-5">
                 <label
                   for="email"
