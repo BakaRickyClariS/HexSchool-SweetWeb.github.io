@@ -52,12 +52,12 @@ class Cart extends HTMLElement {
                 <p>NT$ 3,000</p>
               </li>
             </ul>
-            <button
-              type="submit"
-              class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-4xl font-bold py-6 px-6 transition-colors"
+            <a
+              href="#/checkout"
+              class="block w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-4xl font-bold py-6 px-6 transition-colors"
             >
               結帳
-            </button>
+            </a>
           </div>
       </div>
     </section>
