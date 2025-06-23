@@ -1,67 +1,732 @@
+class CheckoutTransport extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = `
+    <section
+      class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5"
+    >
+      <div class="flex-colBox flex-boxCenter bg-[#3F5D45]">
+        <form class="w-full">
+          <fieldset class="text-2xl p-10 space-y-6">
+            <div class="grid grid-cols-2 gap-10">
+              <h1 class="text-5xl text-white font-bold block w-full py-5">
+                運送
+              </h1>
+              <div class="flex-rowBox items-center">
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-rowBox gap-5">
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="firstName" class="block text-white">姓氏</label>
+                <input
+                  type="name"
+                  id="firstName"
+                  name="firstName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="王"
+                  required
+                />
+              </div>
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="lastName" class="block text-white">名字</label>
+                <input
+                  type="name"
+                  id="lastName"
+                  name="lastName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="小明"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="tel" class="block text-white">電話</label>
+              <input
+                type="text"
+                id="tel"
+                name="tel"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="0912-345-678"
+                required
+              />
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="city" class="block text-white">地址</label>
+              <div class="flex-rowBox items-center gap-5">
+                <select id="city" name="city" class="w-1/2 bg-[#EAF0ED] p-5">
+                  <option value="">請選擇縣市</option>
+                  <option value="台北市">台北市</option>
+                  <option value="台中市">台中市</option>
+                  <option value="高雄市">高雄市</option>
+                </select>
+                <select
+                  id="district"
+                  name="district"
+                  class="w-1/2 bg-[#EAF0ED] p-5"
+                >
+                  <option value="">請先選擇縣市</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="幸福路 520 號"
+              />
+            </div>
+          </fieldset>
+          <button
+            type="submit"
+            class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-6 px-6 transition-colors"
+          >
+            下一步
+          </button>
+        </form>
+      </div>
+      <div class="hidden md:flex flex-col w-1/2 items-start gap-5">
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            訂單摘要
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="flex-rowBox justify-between w-full">
+              <p>小計</p>
+              <p>NT$ 2,700</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full">
+              <p>運費</p>
+              <p>NT$ 300</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full font-bold text-2xl">
+              <p>總計</p>
+              <p>NT$ 3,000</p>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            購物清單
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    `;
+  }
+}
+class CheckoutPayment extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = `
+    <section
+      class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5"
+    >
+      <div class="flex-colBox flex-boxCenter bg-[#3F5D45]">
+        <form class="w-full">
+          <fieldset class="text-2xl p-10 space-y-6">
+            <div class="grid grid-cols-2 gap-10">
+              <h1 class="text-5xl text-white font-bold block w-full py-5">
+                運送
+              </h1>
+              <div class="flex-rowBox items-center">
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-rowBox gap-5">
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="firstName" class="block text-white">姓氏</label>
+                <input
+                  type="name"
+                  id="firstName"
+                  name="firstName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="王"
+                  required
+                />
+              </div>
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="lastName" class="block text-white">名字</label>
+                <input
+                  type="name"
+                  id="lastName"
+                  name="lastName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="小明"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="tel" class="block text-white">電話</label>
+              <input
+                type="text"
+                id="tel"
+                name="tel"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="0912-345-678"
+                required
+              />
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="city" class="block text-white">地址</label>
+              <div class="flex-rowBox items-center gap-5">
+                <select id="city" name="city" class="w-1/2 bg-[#EAF0ED] p-5">
+                  <option value="">請選擇縣市</option>
+                  <option value="台北市">台北市</option>
+                  <option value="台中市">台中市</option>
+                  <option value="高雄市">高雄市</option>
+                </select>
+                <select
+                  id="district"
+                  name="district"
+                  class="w-1/2 bg-[#EAF0ED] p-5"
+                >
+                  <option value="">請先選擇縣市</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="幸福路 520 號"
+              />
+            </div>
+          </fieldset>
+          <button
+            type="submit"
+            class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-6 px-6 transition-colors"
+          >
+            下一步
+          </button>
+        </form>
+      </div>
+      <div class="hidden md:flex flex-col w-1/2 items-start gap-5">
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            訂單摘要
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="flex-rowBox justify-between w-full">
+              <p>小計</p>
+              <p>NT$ 2,700</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full">
+              <p>運費</p>
+              <p>NT$ 300</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full font-bold text-2xl">
+              <p>總計</p>
+              <p>NT$ 3,000</p>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            購物清單
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    `;
+  }
+}
+class CheckoutInvoice extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = `
+    <section
+      class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5"
+    >
+      <div class="flex-colBox flex-boxCenter bg-[#3F5D45]">
+        <form class="w-full">
+          <fieldset class="text-2xl p-10 space-y-6">
+            <div class="grid grid-cols-2 gap-10">
+              <h1 class="text-5xl text-white font-bold block w-full py-5">
+                運送
+              </h1>
+              <div class="flex-rowBox items-center">
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-rowBox gap-5">
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="firstName" class="block text-white">姓氏</label>
+                <input
+                  type="name"
+                  id="firstName"
+                  name="firstName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="王"
+                  required
+                />
+              </div>
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="lastName" class="block text-white">名字</label>
+                <input
+                  type="name"
+                  id="lastName"
+                  name="lastName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="小明"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="tel" class="block text-white">電話</label>
+              <input
+                type="text"
+                id="tel"
+                name="tel"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="0912-345-678"
+                required
+              />
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="city" class="block text-white">地址</label>
+              <div class="flex-rowBox items-center gap-5">
+                <select id="city" name="city" class="w-1/2 bg-[#EAF0ED] p-5">
+                  <option value="">請選擇縣市</option>
+                  <option value="台北市">台北市</option>
+                  <option value="台中市">台中市</option>
+                  <option value="高雄市">高雄市</option>
+                </select>
+                <select
+                  id="district"
+                  name="district"
+                  class="w-1/2 bg-[#EAF0ED] p-5"
+                >
+                  <option value="">請先選擇縣市</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="幸福路 520 號"
+              />
+            </div>
+          </fieldset>
+          <button
+            type="submit"
+            class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-6 px-6 transition-colors"
+          >
+            下一步
+          </button>
+        </form>
+      </div>
+      <div class="hidden md:flex flex-col w-1/2 items-start gap-5">
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            訂單摘要
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="flex-rowBox justify-between w-full">
+              <p>小計</p>
+              <p>NT$ 2,700</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full">
+              <p>運費</p>
+              <p>NT$ 300</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full font-bold text-2xl">
+              <p>總計</p>
+              <p>NT$ 3,000</p>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            購物清單
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    `;
+  }
+}
+class CheckoutMain extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = `
+    <section
+      class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5"
+    >
+      <div class="flex-colBox flex-boxCenter bg-[#3F5D45]">
+        <form class="w-full">
+          <fieldset class="text-2xl p-10 space-y-6">
+            <div class="grid grid-cols-2 gap-10">
+              <h1 class="text-5xl text-white font-bold block w-full py-5">
+                運送
+              </h1>
+              <div class="flex-rowBox items-center">
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-rowBox gap-5">
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="firstName" class="block text-white">姓氏</label>
+                <input
+                  type="name"
+                  id="firstName"
+                  name="firstName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="王"
+                  required
+                />
+              </div>
+              <div class="flex flex-col w-1/2 gap-5">
+                <label for="lastName" class="block text-white">名字</label>
+                <input
+                  type="name"
+                  id="lastName"
+                  name="lastName"
+                  class="w-full bg-[#EAF0ED] p-5"
+                  placeholder="小明"
+                  required
+                />
+              </div>
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="tel" class="block text-white">電話</label>
+              <input
+                type="text"
+                id="tel"
+                name="tel"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="0912-345-678"
+                required
+              />
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="city" class="block text-white">地址</label>
+              <div class="flex-rowBox items-center gap-5">
+                <select id="city" name="city" class="w-1/2 bg-[#EAF0ED] p-5">
+                  <option value="">請選擇縣市</option>
+                  <option value="台北市">台北市</option>
+                  <option value="台中市">台中市</option>
+                  <option value="高雄市">高雄市</option>
+                </select>
+                <select
+                  id="district"
+                  name="district"
+                  class="w-1/2 bg-[#EAF0ED] p-5"
+                >
+                  <option value="">請先選擇縣市</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="幸福路 520 號"
+              />
+            </div>
+          </fieldset>
+          <button
+            type="submit"
+            class="w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-6 px-6 transition-colors"
+          >
+            下一步
+          </button>
+        </form>
+      </div>
+      <div class="hidden md:flex flex-col w-1/2 items-start gap-5">
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            訂單摘要
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="flex-rowBox justify-between w-full">
+              <p>小計</p>
+              <p>NT$ 2,700</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full">
+              <p>運費</p>
+              <p>NT$ 300</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full font-bold text-2xl">
+              <p>總計</p>
+              <p>NT$ 3,000</p>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            購物清單
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    `;
+  }
+}
 class Checkout extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
-    <section class="flex-colBox md:flex-row items-start max-w-content text-center md:py-15 gap-5">
-      <div class="flex-colBox text-[#3F5D45] justify-center gap-5">
-        <div class="w-full bg-[#EAF0ED] flex-boxCenter"><h1 class="block text-3xl p-5 font-bold">您的購物車</h1></div>
-        <div class="px-10 py-5 md:px-0 flex-rowBox items-center w-full">
-        <div class="flex-colBox md:flex-row text-2xl pb-5 border-b-1 border-gray-200">
-        <div class="flex-rowBox pb-5">
-        <img class="flex max-w-[200px] aspect-video md:aspect-square object-cover" src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60" alt="" />
-            
-            <div class="grid grid-cols-1 w-full md:grid-cols-2 items-center px-5">
-            <div class="flex-colBox text-left">
-                <h1 class="block">焦糖馬卡龍</h1>
-                <h1 class="block">NT$ 450</h1>
-            </div>
-            <ul class="grid grid-cols-3 w-full justify-center divide-x-1 divide-gray-200 border-1 border-gray-200 mt-5">
-                <li>
-                <button class="aspect-square py-5">-</button>
-                </li>
-                <li>
-                <button class="aspect-square py-5">1</button>
-                </li>
-                <li>
-                <button class="aspect-square py-5">+</button>
-                </li>
-            </ul>
-            </div>
-            </div>
-            <div class="md:flex md:items-center md:justify-center md:w-1/3 border-t-1 border-gray-200 text-right pt-2 md:border-0 md:pt-0">
-            <h1 class="block ">NT$ 900</h1>
-            </div>
-            </div>
-            <img class=" w-[24px] hidden md:flex object-cover" src="src/assets/images/ic-delete.svg" alt="" />
-        </div>
-      </div>
-      <div class="flex-colBox md:w-1/2 text-[#3F5D45] md:text-[#8DA291] flex-boxCenter md:bg-[#3F5D45] md:order-2">
-        <div class="space-y-6 w-full">
-            <ul class="space-y-6 text-2xl p-10">
-              <h1 class="text-5xl md:text-white font-bold block w-full bg-[#EAF0ED] md:bg-[#3F5D45] py-5 border-b-2 border-white ">訂單摘要</h1>
-              <li class="flex-rowBox justify-between w-full">
-                <p>小計</p>
-                <p>NT$ 2,700</p>
-              </li>
-              <li class="flex-rowBox justify-between w-full">
-                <p>運費</p>
-                <p>NT$ 300</p>
-              </li>
-              <li class="flex-rowBox justify-between w-full font-bold text-3xl md:text-white">
-                <p>總計</p>
-                <p>NT$ 3,000</p>
-              </li>
-            </ul>
-            <a
-              href="#/checkout"
-              class="block w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-4xl font-bold py-6 px-6 transition-colors"
-            >
-              結帳
-            </a>
-          </div>
-      </div>
-    </section>
+    <shop-nav></shop-nav>
+    <div id="shop-outlet"></div>
+    <my-pagination></my-pagination>
     `;
+    this.shopRouter = new SimpleRouter("shop-outlet");
+    this.shopRouter.addRoute("/shop/optical", "shop-optical");
+    this.shopRouter.addRoute("/shop/sunglasses", "shop-sunglasses");
+    this.shopRouter.addRoute("/shop/functional", "shop-functional");
+    this.shopRouter.resolve();
   }
 }
 
