@@ -15,9 +15,9 @@
   </head>
   <body>
     <my-navbar></my-navbar>
-    <!-- <div id="outlet"></div> -->
+    <div id="outlet"></div>
 
-    <section
+    <!-- <section
       class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5"
     >
       <div class="flex-colBox flex-boxCenter bg-[#3F5D45]">
@@ -35,21 +35,17 @@
                     class="w-5 h-5 rounded-full border-2 border-white bg-white"
                   ></div>
                 </div>
-                <div class="w-full border-t-2 border-white"></div>
+                <div class="w-full border-t-2 border-[#8DA291]"></div>
                 <div
-                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-[#8DA291] flex items-center justify-center"
                 >
-                  <div
-                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
-                  ></div>
+                  <div class="w-5 h-5 rounded-full bg-[#3F5D45]"></div>
                 </div>
-                <div class="w-full border-t-2 border-white"></div>
+                <div class="w-full border-t-2 border-[#8DA291]"></div>
                 <div
-                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-[#8DA291] flex items-center justify-center"
                 >
-                  <div
-                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
-                  ></div>
+                  <div class="w-5 h-5 rounded-full bg-[#3F5D45]"></div>
                 </div>
               </div>
             </div>
@@ -188,8 +184,281 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
+    <!-- <section
+      class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5"
+    >
+      <div class="flex-colBox flex-boxCenter bg-[#3F5D45]">
+        <form class="w-full">
+          <fieldset class="text-2xl p-10 space-y-6">
+            <div class="grid grid-cols-2 gap-10">
+              <h1 class="text-5xl text-white font-bold block w-full py-5">
+                付款
+              </h1>
+              <div class="flex-rowBox items-center">
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  >
+                    <img
+                      class="w-[24px]"
+                      src="./src/assets/images/ic-check.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  >
+                    <img
+                      class="w-[24px]"
+                      src="./src/assets/images/ic-check.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="w-full border-t-2 border-white"></div>
+                <div
+                  class="w-7 h-7 aspect-square rounded-full border-2 border-white flex items-center justify-center"
+                >
+                  <div
+                    class="w-5 h-5 rounded-full border-2 border-white bg-white"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex w-full divide-x-3 divide-[#EAF0ED] text-3xl border-3 border-[#EAF0ED]"
+            >
+              <div class="flex w-full">
+                <input
+                  type="radio"
+                  id="electronic"
+                  name="invoice"
+                  class="peer/electronic hidden"
+                  checked
+                />
+                <label
+                  for="electronic"
+                  class="w-full bg-[#EAF0ED] font-bold text-[#3F5D45] p-5 text-center cursor-pointer peer-checked/electronic:bg-[#EAF0ED] peer-checked/electronic:text-[#3F5D45] peer-checked/electronic:font-bold bg-transparent text-[#EAF0ED]"
+                >
+                  電子發票
+                </label>
 
+                <input
+                  type="radio"
+                  id="mail"
+                  name="invoice"
+                  class="peer/mail hidden"
+                />
+                <label
+                  for="mail"
+                  class="w-full bg-transparent font-bold text-[#EAF0ED] p-5 text-center cursor-pointer peer-checked/mail:bg-[#EAF0ED] peer-checked/mail:text-[#3F5D45]"
+                >
+                  郵寄發票
+                </label>
+              </div>
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="email" class="block text-white">電子郵件信箱</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="example@email.com"
+                required
+              />
+            </div>
+            <div class="flex-colBox gap-5">
+              <label
+                for="city"
+                class="flex justify-between items-center text-white"
+                >地址
+                <div class="flex items-center space-x-2">
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    name="checkbox"
+                    class="h-5 w-5"
+                    required
+                  />
+                  <label for="checkbox" class="text-white text-sm">
+                    同運送地址
+                  </label>
+                </div>
+              </label>
+              <div class="flex-rowBox items-center gap-5">
+                <select id="city" name="city" class="w-1/2 bg-[#EAF0ED] p-5">
+                  <option value="" disabled>請選擇縣市</option>
+                  <option value="台北市">台北市</option>
+                  <option value="台中市">台中市</option>
+                  <option value="高雄市">高雄市</option>
+                </select>
+                <select
+                  id="district"
+                  name="district"
+                  class="w-1/2 bg-[#EAF0ED] p-5"
+                >
+                  <option value="" disabled>請先選擇縣市</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="幸福路 520 號"
+              />
+            </div>
+            <div class="flex-colBox gap-5">
+              <label for="taxID" class="block text-white"
+                >統一編號（選填）</label
+              >
+              <input
+                type="text"
+                id="taxID"
+                name="taxID"
+                class="w-full bg-[#EAF0ED] p-5"
+                placeholder="12345678"
+                required
+              />
+            </div>
+          </fieldset>
+          <button type="submit" class="flex w-full">
+            <a
+              class="block w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-2xl font-bold py-6 px-6 transition-colors"
+              href="#/checkout/complete"
+              >確認結帳</a
+            >
+          </button>
+        </form>
+      </div>
+      <div class="hidden md:flex flex-col w-1/2 items-start gap-5">
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            訂單摘要
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="flex-rowBox justify-between w-full">
+              <p>小計</p>
+              <p>NT$ 2,700</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full">
+              <p>運費</p>
+              <p>NT$ 300</p>
+            </li>
+            <li class="flex-rowBox justify-between w-full font-bold text-2xl">
+              <p>總計</p>
+              <p>NT$ 3,000</p>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full border-1 border-gray-200">
+          <h1
+            class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"
+          >
+            購物清單
+          </h1>
+          <ul class="space-y-6 text-lg p-5">
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+            <li class="grid grid-cols-2 justify-between w-full gap-5">
+              <img
+                class="flex w-full aspect-video object-cover"
+                src="https://images.unsplash.com/photo-1504855328839-2f4baf9e0fd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=db0c8e5539456faeca0e49c79e2ccb16&auto=format&fit=crop&w=800&q=60"
+                alt=""
+              />
+              <div class="flex-colBox justify-center">
+                <p>焦糖馬卡龍（2）</p>
+                <p class="font-bold text-2xl">NT$ 900</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+    <!-- <section
+      class="flex-colBox flex-boxCenter max-w-screen-lg mx-auto overflow-hidden h-[460px] relative bg-[url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=2160&q=80')] bg-cover bg-center bg-no-repeat gap-10 md:mb-10"
+    >
+      <div class="flex-rowBox items-center max-w-[240px]">
+        <div
+          class="w-7 h-7 aspect-square rounded-full border-[#3F5D45] flex items-center justify-center"
+        >
+          <div
+            class="w-5 h-5 rounded-full border-2 border-[#3F5D45] bg-[#3F5D45]"
+          >
+            <img
+              class="w-[24px] grayscale brightness-500"
+              src="./src/assets/images/ic-check.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="w-full border-t-2 border-[#3F5D45]"></div>
+        <div
+          class="w-7 h-7 aspect-square rounded-full border-[#3F5D45] flex items-center justify-center"
+        >
+          <div
+            class="w-5 h-5 rounded-full border-2 border-[#3F5D45] bg-[#3F5D45]"
+          >
+            <img
+              class="w-[24px] grayscale brightness-500"
+              src="./src/assets/images/ic-check.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="w-full border-t-2 border-[#3F5D45]"></div>
+        <div
+          class="w-7 h-7 aspect-square rounded-full border-[#3F5D45] flex items-center justify-center"
+        >
+          <div
+            class="w-5 h-5 rounded-full border-2 border-[#3F5D45] bg-[#3F5D45]"
+          >
+            <img
+              class="w-[24px] grayscale brightness-500"
+              src="./src/assets/images/ic-check.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <h1 class="block text-center w-full custom-title text-6xl">付款成功</h1>
+      <a
+        href="#/products"
+        class="flex w-full py-5 text-3xl btn-y md:w-[300px] justify-center absolute bottom-0 md:static"
+        >繼續逛逛</a
+      >
+    </section> -->
     <my-footer></my-footer>
     <script type="module" src="./src/main.js"></script>
   </body>
