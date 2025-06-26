@@ -117,4 +117,24 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+  .block-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+    overflow: hidden;
+  }
+  .block-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  .block-item a {
+    transition: all 0.3s ease;
+  }
+  .block-item:hover a {
+    transform: scale(1.1);
+  }
+  .fade-section {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 }

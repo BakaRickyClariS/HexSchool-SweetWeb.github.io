@@ -172,7 +172,7 @@ class Navbar extends HTMLElement {
       if (btn && group.contains(btn)) {
         gsap.to(btn, {
           y: 0,
-          opacity: 0.7,
+          opacity: 1,
           duration: 0.5,
           ease: "power2.inOut",
         });

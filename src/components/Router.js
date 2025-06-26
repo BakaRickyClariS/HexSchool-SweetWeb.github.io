@@ -31,6 +31,10 @@ class SimpleRouter {
    */
   /*******  c590f5cf-602a-410a-b459-ad3621a221df  *******/
   resolve() {
+    if (!this.outlet) {
+      console.warn("路由跳轉被忽略：outlet 尚未準備好");
+      return;
+    }
     const path = window.location.hash.slice(1) || "/";
     console.log(path);
 

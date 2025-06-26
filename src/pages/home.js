@@ -1,6 +1,4 @@
 import ProductItem from "../components/ProductItem.js";
-// 註冊插件
-gsap.registerPlugin(ScrambleTextPlugin);
 class Home extends HTMLElement {
   constructor() {
     super();
@@ -101,7 +99,7 @@ class Home extends HTMLElement {
     ];
     this.innerHTML = `
     <main class="flex-colBox md:gap-[150px]">
-      <section class="flex-colBox items-center md:pb-40">
+      <section class="flex-colBox items-center md:pb-40 fade-section">
         <div
           class="flex-colBox max-w-content md:px-10 relative flex-boxCenter"
         >
@@ -116,7 +114,7 @@ class Home extends HTMLElement {
             .map(
               (item) => `
             <li
-              class="text-white flex flex-boxCenter"
+              class="text-white flex flex-boxCenter block-item"
               style="
                   background-image: url('${item.img}');
                   background-size: cover;
@@ -125,7 +123,7 @@ class Home extends HTMLElement {
             >
               <a
                 href="${item.link}"
-                class="${item.bgc}"
+                class="${item.bgc} block-link"
               >
                 ${item.title}
               </a>
@@ -138,7 +136,10 @@ class Home extends HTMLElement {
       </section>
       ${articleInfo
         .map(
-          (item, i) => `<section class="bg-[#EAF0ED] md:max-h-[400px]">
+          (
+            item,
+            i
+          ) => `<section class="bg-[#EAF0ED] md:max-h-[400px] fade-section">
         <ul
           class="flex-colBox md:flex-row flex-boxCenter max-w-content md:px-10 md:gap-0"
         >
@@ -174,48 +175,13 @@ class Home extends HTMLElement {
           ${vlTextHtml(vlText, 2)}
         </div>
       </section>
-      <section class="max-w-content">
+      <section class="max-w-content fade-section">
         <product-item class="px-10 pb-20" itemInfo='${JSON.stringify(
           shopInfo
         )}'></product-item>
       </section>
     </main>
     `;
-
-    this.textEffect();
-  }
-  textEffect() {
-    // 對每行詩詞應用 scramble 效果
-    gsap.to(".poem-line", {
-      duration: 2,
-      scrambleText: {
-        text: "{original}", // 使用原始文字
-        chars: "XO!@#$%^&*()_+-=[]{}|;':\",./<>?", // 自定義亂碼字符
-        tweenLength: false,
-      },
-      stagger: 0.3, // 每行間隔 0.3 秒
-      ease: "none",
-    });
-
-    // 先執行 scramble，再執行你的 Y 軸動畫
-    gsap
-      .timeline()
-      .to(".poem-line", {
-        duration: 1.5,
-        scrambleText: { text: "{original}" },
-        stagger: 0.2,
-      })
-      .from(
-        ".poem-line",
-        {
-          y: 40,
-          opacity: 0,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power2.out",
-        },
-        "-=1"
-      ); // 提前 1 秒開始 Y 軸動畫
   }
 }
 
