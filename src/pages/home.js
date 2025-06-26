@@ -1,4 +1,6 @@
 import ProductItem from "../components/ProductItem.js";
+// 註冊插件
+gsap.registerPlugin(ScrambleTextPlugin);
 class Home extends HTMLElement {
   constructor() {
     super();
@@ -51,13 +53,13 @@ class Home extends HTMLElement {
             >
               <span
                 ${textInfo[i].absolute[1]}
-              >
-                ${textInfo[i].lineA}<span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
+              ><span class="poem-line">${textInfo[i].lineA}</span>
+                <span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
                   <span class="custom-title-rotate">|</span>
                   <span class="custom-title-rotate"
                     >|</span
                   > </span
-                ><br />&nbsp;${textInfo[i].lineB}</span
+                ><br />&nbsp;<span class="poem-line">${textInfo[i].lineB}</span></span
               >
             </h1>`;
     }
@@ -156,7 +158,7 @@ class Home extends HTMLElement {
           </li>
           <li class="md-order-${item.order[2]} w-full md:w-2/6">
             <p
-              class="vlText-md md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
+              class="poem-line vlText-md md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
             >
               ${articleContent}
             </p>
@@ -179,6 +181,41 @@ class Home extends HTMLElement {
       </section>
     </main>
     `;
+
+    this.textEffect();
+  }
+  textEffect() {
+    // 對每行詩詞應用 scramble 效果
+    gsap.to(".poem-line", {
+      duration: 2,
+      scrambleText: {
+        text: "{original}", // 使用原始文字
+        chars: "XO!@#$%^&*()_+-=[]{}|;':\",./<>?", // 自定義亂碼字符
+        tweenLength: false,
+      },
+      stagger: 0.3, // 每行間隔 0.3 秒
+      ease: "none",
+    });
+
+    // 先執行 scramble，再執行你的 Y 軸動畫
+    gsap
+      .timeline()
+      .to(".poem-line", {
+        duration: 1.5,
+        scrambleText: { text: "{original}" },
+        stagger: 0.2,
+      })
+      .from(
+        ".poem-line",
+        {
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power2.out",
+        },
+        "-=1"
+      ); // 提前 1 秒開始 Y 軸動畫
   }
 }
 

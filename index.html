@@ -11,12 +11,67 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <title>Sweetaste</title>
   </head>
   <body>
     <my-navbar></my-navbar>
     <div id="outlet"></div>
-
+      class="flex-colBox flex-boxCenter max-w-screen-lg mx-auto overflow-hidden h-[460px] relative bg-[url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=2160&q=80')] bg-cover bg-center bg-no-repeat gap-10 md:mb-10"
+    >
+      <div class="flex-rowBox items-center max-w-[240px]">
+        <div
+          class="w-7 h-7 aspect-square rounded-full border-[#3F5D45] flex items-center justify-center"
+        >
+          <div
+            class="w-5 h-5 rounded-full border-2 border-[#3F5D45] bg-[#3F5D45]"
+          >
+            <img
+              class="w-[24px] grayscale brightness-500"
+              src="./src/assets/images/ic-check.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="w-full border-t-2 border-[#3F5D45]"></div>
+        <div
+          class="w-7 h-7 aspect-square rounded-full border-[#3F5D45] flex items-center justify-center"
+        >
+          <div
+            class="w-5 h-5 rounded-full border-2 border-[#3F5D45] bg-[#3F5D45]"
+          >
+            <img
+              class="w-[24px] grayscale brightness-500"
+              src="./src/assets/images/ic-check.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="w-full border-t-2 border-[#3F5D45]"></div>
+        <div
+          class="w-7 h-7 aspect-square rounded-full border-[#3F5D45] flex items-center justify-center"
+        >
+          <div
+            class="w-5 h-5 rounded-full border-2 border-[#3F5D45] bg-[#3F5D45]"
+          >
+            <img
+              class="w-[24px] grayscale brightness-500"
+              src="./src/assets/images/ic-check.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <h1 class="block text-center w-full custom-title text-6xl">付款成功</h1>
+      <a
+        href="#/products"
+        class="flex w-full py-5 text-3xl btn-y md:w-[300px] justify-center absolute bottom-0 md:static"
+        >繼續逛逛</a
+      >
+    </section> -->
     <my-footer></my-footer>
     <script type="module" src="./src/main.js"></script>
   </body>

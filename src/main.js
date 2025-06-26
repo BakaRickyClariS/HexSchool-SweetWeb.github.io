@@ -25,5 +25,9 @@ router.addRoute("/login", "my-login");
 router.addRoute("/products", "my-products");
 router.addRoute("/cart", "my-cart");
 router.addRoute("/checkout", "my-checkout");
+router.addRoute("/checkout/transport", "my-checkout");
+router.addRoute("/checkout/payment", "my-checkout");
+router.addRoute("/checkout/invoice", "my-checkout");
+router.addRoute("/checkout/complete", "my-checkout");
 
 router.resolve();
