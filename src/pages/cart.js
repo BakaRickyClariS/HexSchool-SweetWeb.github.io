@@ -2,7 +2,7 @@ class Cart extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
-    <section class="flex-colBox md:flex-row items-start max-w-content text-center md:py-15 gap-5">
+    <section class="flex-colBox md:flex-row items-start max-w-content text-center md:py-15 gap-5 fade-section">
       <div class="flex-colBox text-[#3F5D45] justify-center gap-5">
         <div class="w-full bg-[#EAF0ED] flex-boxCenter"><h1 class="block text-3xl p-5 font-bold">您的購物車</h1></div>
         <div class="px-10 py-5 md:px-0 flex-rowBox items-center w-full">
@@ -35,7 +35,7 @@ class Cart extends HTMLElement {
             <img class=" w-[24px] hidden md:flex object-cover" src="src/assets/images/ic-delete.svg" alt="" />
         </div>
       </div>
-      <div class="flex-colBox md:w-1/2 text-[#3F5D45] md:text-[#8DA291] flex-boxCenter md:bg-[#3F5D45] md:order-2">
+      <div class="flex-colBox md:w-1/2 text-[#3F5D45] md:text-[#8DA291] flex-boxCenter md:bg-[#3F5D45] md:order-2 fade-section">
         <div class="space-y-6 w-full">
             <ul class="space-y-6 text-2xl p-10">
               <h1 class="text-5xl md:text-white font-bold block w-full bg-[#EAF0ED] md:bg-[#3F5D45] py-5 border-b-2 border-white ">訂單摘要</h1>

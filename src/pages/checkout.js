@@ -478,10 +478,10 @@ class CheckoutComplete extends HTMLElement {
           </div>
         </div>
       </div>
-      <h1 class="block text-center w-full custom-title text-6xl">付款成功</h1>
+      <h1 class="block text-center w-full custom-title text-6xl poem-line">付款成功</h1>
       <a
         href="#/products"
-        class="flex w-full py-5 text-3xl btn-y md:w-[300px] justify-center absolute bottom-0 md:static"
+        class="flex w-full py-5 text-3xl btn-y md:w-[300px] justify-center absolute bottom-0 md:static block-item"
         >繼續逛逛</a
       >
     </section>
@@ -554,12 +554,12 @@ class Checkout extends HTMLElement {
 
     this.innerHTML = `
     <section
-      class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5"
+      class="flex-colBox md:flex-row items-start max-w-screen-lg mx-auto md:py-15 text-[#8DA291] gap-5 fade-section"
     >
       <div class="flex-colBox flex-boxCenter bg-[#3F5D45]">
         <div id="checkout-outlet" class="w-full"></div>
       </div>
-      <div class="hidden md:flex flex-col w-1/2 items-start gap-5">
+      <div class="hidden md:flex flex-col w-1/2 items-start gap-5 fade-section">
         <div class="w-full border-1 border-gray-200">
           <h1
             class="text-3xl font-bold block w-full bg-[#EAF0ED] py-5 text-center font-bold"

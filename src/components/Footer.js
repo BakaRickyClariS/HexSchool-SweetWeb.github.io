@@ -16,7 +16,7 @@ class Footer extends HTMLElement {
                 src="src/assets/images/logo-light.svg"
                 alt=""
               />
-              <h1 class="text-2xl text-white">訂閱你我的甜蜜郵件</h1>
+              <h1 class="text-2xl text-white ">訂閱你我的甜蜜郵件</h1>
             </div>
             <div
               class="flex flex-row justify-between bg-white w-full max-w-[400px]"
@@ -56,8 +56,8 @@ class Footer extends HTMLElement {
                 class="[writing-mode:vertical-rl] [text-orientation:upright] font-bold text-2xl leading-[40px]"
                 style="font-family: 'Noto Serif TC', serif"
               >
-                今天是個||<br />
-                &nbsp;吃甜點的好日子
+                <span class="">今天是個</span>||<br />
+                &nbsp;<span class="">吃甜點的好日子</span>
               </h1>
             </div>
           </div>
