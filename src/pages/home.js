@@ -47,14 +47,14 @@ class Home extends HTMLElement {
     ];
     function vlTextHtml(textInfo, i) {
       return `<h1
-              class="${textInfo[i].absolute[0]} vlText-md custom-title"
+              class="${textInfo[i].absolute[0]} vlText-md custom-title fade-section"
             >
               <span
                 ${textInfo[i].absolute[1]}
               ><span class="poem-line">${textInfo[i].lineA}</span>
                 <span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
-                  <span class="custom-title-rotate">|</span>
-                  <span class="custom-title-rotate"
+                  <span class="custom-title-rotate poem-line">|</span>
+                  <span class="custom-title-rotate poem-line"
                     >|</span
                   > </span
                 ><br />&nbsp;<span class="poem-line">${textInfo[i].lineB}</span></span
@@ -108,7 +108,7 @@ class Home extends HTMLElement {
             alt=""
           />
           <ul
-            class="grid grid-rows-3 w-full vlText gap-[1px] min-h-[250px] md:gap-0 md:absolute md:bottom-[-250px] md:max-w-5xl text-4xl md:text-3xl md:min-h-[450px] font-bold md:p-10"
+            class="grid grid-rows-3 w-full vlText gap-[1px] min-h-[250px] md:gap-0 md:absolute md:bottom-[-250px] md:max-w-5xl text-4xl md:text-3xl md:min-h-[450px] font-bold md:p-10 fade-section"
           >
           ${classifyInfo
             .map(
@@ -152,7 +152,7 @@ class Home extends HTMLElement {
           </li>
           <li class="w-full md-order-${item.order[1]} md:w-3/6">
             <img
-              class="w-full md:max-w-[500px] aspect-square md:min-h-[400px]"
+              class="w-full md:max-w-[500px] aspect-square md:min-h-[400px] fade-section"
               src="${item.img}"
               alt=""
             />

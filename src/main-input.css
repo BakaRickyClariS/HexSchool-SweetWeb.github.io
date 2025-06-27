@@ -92,7 +92,7 @@
     }
   }
   .btn-y {
-    @apply bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white font-bold transition-colors;
+    @apply bg-[#FFE180] hover:bg-[#E6C75B] text-[#3F5D45] font-bold transition-colors;
   }
   .gsap-btn {
     display: inline-block;
@@ -136,5 +136,9 @@
   .fade-section {
     opacity: 0;
     transform: translateY(50px);
+  }
+  .slide-fade-text {
+    display: inline-block;
+    white-space: nowrap;
   }
 }

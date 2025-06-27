@@ -358,7 +358,7 @@ class CheckoutInvoice extends HTMLElement {
           </fieldset>
           <button type="submit" class="flex w-full">
             <a
-              class="block w-full bg-[#FFE180] btn-y text-2xl py-6 px-6"
+              class="block w-full btn-y text-2xl py-6 px-6"
               href="#/checkout/complete"
               >確認結帳</a
             >
@@ -433,9 +433,9 @@ class CheckoutComplete extends HTMLElement {
     super();
     this.innerHTML = `
         <section
-      class="flex-colBox flex-boxCenter max-w-screen-xl mx-auto overflow-hidden h-[460px] relative bg-[url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=2160&q=80')] bg-cover bg-center bg-no-repeat gap-10 md:mb-10"
+      class="flex-colBox flex-boxCenter max-w-screen-xl mx-auto overflow-hidden h-[460px] relative bg-[url('https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2c5a2cf31c693f5c15fb08135bf1adf2&auto=format&fit=crop&w=2160&q=80')] bg-cover bg-center bg-no-repeat gap-10 md:mb-10 fade-section"
     >
-      <div class="flex-rowBox items-center max-w-[240px]">
+      <div class="flex-rowBox items-center max-w-[240px] fade-section">
         <div
           class="w-7 h-7 aspect-square rounded-full border-[#3F5D45] flex items-center justify-center"
         >
@@ -481,7 +481,7 @@ class CheckoutComplete extends HTMLElement {
       <h1 class="block text-center w-full custom-title text-6xl poem-line">付款成功</h1>
       <a
         href="#/products"
-        class="flex w-full py-5 text-3xl btn-y md:w-[300px] justify-center absolute bottom-0 md:static block-item"
+        class="flex w-full py-5 text-3xl btn-y md:w-[300px] justify-center absolute bottom-0 md:static block-item fade-section"
         >繼續逛逛</a
       >
     </section>

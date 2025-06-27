@@ -349,6 +349,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-\[40px\] {
+    max-width: 40px;
+  }
   .max-w-\[200px\] {
     max-width: 200px;
   }
@@ -545,9 +548,6 @@
   .bg-\[\#EAF0ED\] {
     background-color: #EAF0ED;
   }
-  .bg-\[\#FFE180\] {
-    background-color: #FFE180;
-  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -740,11 +740,6 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .transition-colors {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
   .\[text-orientation\:upright\] {
     text-orientation: upright;
   }
@@ -795,14 +790,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-white);
-      }
-    }
-  }
-  .hover\:invert {
-    &:hover {
-      @media (hover: hover) {
-        --tw-invert: invert(100%);
-        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
       }
     }
   }
@@ -1312,12 +1299,7 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     &:hover {
       @media (hover: hover) {
-        background-color: #EAF0ED;
-      }
-    }
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-white);
+        background-color: #E6C75B;
       }
     }
   }
@@ -1361,6 +1343,10 @@
   .fade-section {
     opacity: 0;
     transform: translateY(50px);
+  }
+  .slide-fade-text {
+    display: inline-block;
+    white-space: nowrap;
   }
 }
 @property --tw-scale-x {

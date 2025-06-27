@@ -54,7 +54,7 @@ class Cart extends HTMLElement {
             </ul>
             <a
               href="#/checkout"
-              class="block w-full bg-[#FFE180] hover:bg-[#EAF0ED] text-[#3F5D45] hover:text-white text-4xl font-bold py-6 px-6 transition-colors"
+              class="block w-full btn-y text-4xl py-6 px-6"
             >
               結帳
             </a>

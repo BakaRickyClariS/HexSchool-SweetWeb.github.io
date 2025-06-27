@@ -33,12 +33,12 @@ class Products extends HTMLElement {
           />
         </div>
         <h1
-              class="absolute top-[30px] xl:top-[100px] right-5 vlText custom-title md:text-5xl md:leading-[80px] xl:text-6xl xl:leading-[100px]"
+              class="absolute top-[30px] xl:top-[100px] right-5 vlText custom-title md:text-5xl md:leading-[80px] xl:text-6xl xl:leading-[100px] fade-section"
             >
               <span
                 class="h-[400px] w-[400px]"
               >
-                <span class="poem-line">想吃甜點</span>||<br />&nbsp;<span class="poem-line">是不需要理由的。</span></span
+                <span class="poem-line">想吃甜點</span><span class="poem-line">||</span><br />&nbsp;<span class="poem-line">是不需要理由的。</span></span
               >
             </h1>
       </section>

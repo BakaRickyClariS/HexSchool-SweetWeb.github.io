@@ -5,6 +5,7 @@ class Animation {
     this.scrollTriggers = [];
     this.timelines = [];
     this.eventListeners = []; // 新增：存儲事件監聽器
+    this.slideFadeTextSimple(".slide-fade-text");
   }
 
   killAllAnimations() {
@@ -150,6 +151,53 @@ class Animation {
         { element: item, type: "mouseenter", handler: enterHandler },
         { element: item, type: "mouseleave", handler: leaveHandler }
       );
+    });
+  }
+  // 單純左右滑入滑出動畫，支援多個元素與方向
+  slideFadeTextSimple(selector = ".slide-fade-text") {
+    gsap.utils.toArray(selector).forEach((el, index) => {
+      const direction = el.dataset.direction || "left";
+      const distance = 80;
+      const fromX = direction === "left" ? -distance : distance;
+
+      gsap.set(el, { x: fromX, opacity: 0 });
+
+      // 第一個觸發範圍（一般情境）
+      gsap.to(el, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          end: "bottom 0%",
+          toggleActions: "play none none reverse",
+          id: `slide-fade-main-${index}`,
+        },
+      });
+
+      // 第二個觸發範圍（專為頁面底部設計）
+      gsap.to(el, {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "bottom bottom", // 當元素底部碰到視窗底部時也觸發
+          end: "bottom bottom",
+          toggleActions: "play none none reverse",
+          id: `slide-fade-bottomfix-${index}`,
+        },
+      });
+    });
+
+    // 頁面載入後強制 refresh
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
     });
   }
 }
