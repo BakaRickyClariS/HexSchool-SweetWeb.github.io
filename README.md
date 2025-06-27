@@ -7,6 +7,8 @@
 本專案為六角學院前端課程的實作練習，聚焦於現代網頁切版、互動動畫與元件化開發。  
 採用 **HTML5**、**CSS3**、**JavaScript**，結合 **Web Component**、**Tailwind CSS** 及 **GSAP**，打造響應式與動態效果兼備的網站。
 
+---
+
 ## 🛠️ 技術棧
 
 - **HTML5**：結構化網頁內容
@@ -14,6 +16,8 @@
 - **JavaScript (ES6+)**：實現前端互動邏輯
 - **Web Component**：推動元件化開發，提升可維護性與重用性
 - **GSAP (GreenSock Animation Platform)**：打造高效流暢的動畫效果
+
+---
 
 ## 🚀 專案特色
 
@@ -23,22 +27,7 @@
 - 純前端專案，**無需 Node.js 或後端環境**
 - 原始碼結構清晰，便於維護與擴充
 
-## 📁 專案結構
-
-HexSchool-SweetWeb.github.io/
-├── components/ # Web Component 元件
-├── css/ # 樣式表（含 Tailwind）
-├── js/ # JavaScript 腳本
-├── images/ # 圖片資源
-├── index.html # 首頁
-└── README.md # 專案說明文件
-
-
-## 🖥️ 如何使用
-
-1. 下載或 clone 本專案
-2. 直接以瀏覽器開啟 `index.html`，即可瀏覽網站
-3. **無需任何後端或 Node.js 環境**
+---
 
 ## 🎯 學習重點 & 求職亮點
 
@@ -49,13 +38,14 @@ HexSchool-SweetWeb.github.io/
 - 展現元件化思維與現代前端技術整合能力
 - 具備獨立開發響應式互動網站的全流程經驗
 
+---
+
 ## 🔗 參考資源
 
-- [六角學院 HexSchool](https://www.hexschool.com/)
 - [Tailwind CSS 官方文件](https://tailwindcss.com/)
 - [GSAP 官方網站](https://greensock.com/gsap/)
 - [Web Components 官方說明](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 
+---
+
 > 歡迎參考、指教或提出 Issue！  
->
-> _本專案持續優化中，歡迎 star ⭐ 支持！_
