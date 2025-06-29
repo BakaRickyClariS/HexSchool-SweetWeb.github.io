@@ -2,7 +2,7 @@ class Footer extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
-    <footer class="flex bg-[#EAF0ED] pb-10">
+    <footer class="flex bg-[#EAF0ED] pb-10 overflow-x-hidden">
       <div class="flex flex-col mx-auto w-full">
         <section class="bg-[#3F5D45] w-full">
           <div
