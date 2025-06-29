@@ -22,7 +22,7 @@ class Products extends HTMLElement {
     ];
     this.innerHTML = `
     <main class="flex-colBox">
-      <section class="relative max-w-content flex-colBox items-center md:pb-20">
+      <section class="relative max-w-content flex-colBox items-center md:pb-20 fade-section">
         <div
           class="flex-colBox md:px-10 flex-boxCenter overflow-hidden max-h-[763px]"
         >
@@ -33,16 +33,16 @@ class Products extends HTMLElement {
           />
         </div>
         <h1
-              class="absolute top-[30px] xl:top-[100px] right-5 vlText custom-title md:text-5xl md:leading-[80px] xl:text-6xl xl:leading-[100px]"
+              class="absolute top-[30px] xl:top-[100px] right-5 vlText custom-title md:text-5xl md:leading-[80px] xl:text-6xl xl:leading-[100px] fade-section"
             >
               <span
                 class="h-[400px] w-[400px]"
               >
-                想吃甜點||<br />&nbsp;是不需要理由的。</span
+                <span class="poem-line">想吃甜點</span><span class="poem-line">||</span><br />&nbsp;<span class="poem-line">是不需要理由的。</span></span
               >
             </h1>
       </section>
-      <section class="max-w-content flex-colBox md:flex-row gap-10 md:gap-5">
+      <section class="max-w-content flex-colBox md:flex-row gap-10 md:gap-5 fade-section">
       <div class="flex w-full md:w-1/5">
       <ul class="flex-colBox text-center text-[#3F5D45] text-4xl md:text-2xl font-bold">
       <li class="w-full bg-[#3F5D45] text-white py-5">甜點類別</li>
@@ -56,7 +56,7 @@ class Products extends HTMLElement {
           shopInfo
         )}'></product-item>
       </section>
-      <my-pagination class="max-w-content w-full"></my-pagination>
+      <my-pagination class="max-w-content w-full fade-section"></my-pagination>
     </main>
     `;
   }

@@ -89,7 +89,56 @@
     }
     .md-order-7 {
       order: 7;
-      order: ;
     }
+  }
+  .btn-y {
+    @apply bg-[#FFE180] hover:bg-[#E6C75B] text-[#3F5D45] font-bold transition-colors;
+  }
+  .gsap-btn {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .gsap-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background-color: #3f5d45; /* 可改為你要的顏色 */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .gsap-btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .block-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center;
+    overflow: hidden;
+  }
+  .block-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  .block-item a {
+    transition: all 0.3s ease;
+  }
+  .block-item:hover a {
+    transform: scale(1.1);
+  }
+  .fade-section {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  .slide-fade-text {
+    display: inline-block;
+    white-space: nowrap;
   }
 }

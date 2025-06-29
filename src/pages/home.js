@@ -47,17 +47,17 @@ class Home extends HTMLElement {
     ];
     function vlTextHtml(textInfo, i) {
       return `<h1
-              class="${textInfo[i].absolute[0]} vlText-md custom-title"
+              class="${textInfo[i].absolute[0]} vlText-md custom-title fade-section"
             >
               <span
                 ${textInfo[i].absolute[1]}
-              >
-                ${textInfo[i].lineA}<span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
-                  <span class="custom-title-rotate">|</span>
-                  <span class="custom-title-rotate"
+              ><span class="poem-line">${textInfo[i].lineA}</span>
+                <span class="pl-8 inline-flex md:pl-0 gap-2 md:gap-0">
+                  <span class="custom-title-rotate poem-line">|</span>
+                  <span class="custom-title-rotate poem-line"
                     >|</span
                   > </span
-                ><br />&nbsp;${textInfo[i].lineB}</span
+                ><br />&nbsp;<span class="poem-line">${textInfo[i].lineB}</span></span
               >
             </h1>`;
     }
@@ -99,7 +99,7 @@ class Home extends HTMLElement {
     ];
     this.innerHTML = `
     <main class="flex-colBox md:gap-[150px]">
-      <section class="flex-colBox items-center md:pb-40">
+      <section class="flex-colBox items-center md:pb-40 fade-section">
         <div
           class="flex-colBox max-w-content md:px-10 relative flex-boxCenter"
         >
@@ -108,13 +108,13 @@ class Home extends HTMLElement {
             alt=""
           />
           <ul
-            class="grid grid-rows-3 w-full vlText gap-[1px] min-h-[250px] md:gap-0 md:absolute md:bottom-[-250px] md:max-w-5xl text-4xl md:text-3xl md:min-h-[450px] font-bold md:p-10"
+            class="grid grid-rows-3 w-full vlText gap-[1px] min-h-[250px] md:gap-0 md:absolute md:bottom-[-250px] md:max-w-5xl text-4xl md:text-3xl md:min-h-[450px] font-bold md:p-10 fade-section"
           >
           ${classifyInfo
             .map(
               (item) => `
             <li
-              class="text-white flex flex-boxCenter"
+              class="text-white flex flex-boxCenter block-item"
               style="
                   background-image: url('${item.img}');
                   background-size: cover;
@@ -123,7 +123,7 @@ class Home extends HTMLElement {
             >
               <a
                 href="${item.link}"
-                class="${item.bgc}"
+                class="${item.bgc} block-link"
               >
                 ${item.title}
               </a>
@@ -136,7 +136,10 @@ class Home extends HTMLElement {
       </section>
       ${articleInfo
         .map(
-          (item, i) => `<section class="bg-[#EAF0ED] md:max-h-[400px]">
+          (
+            item,
+            i
+          ) => `<section class="bg-[#EAF0ED] md:max-h-[400px] fade-section">
         <ul
           class="flex-colBox md:flex-row flex-boxCenter max-w-content md:px-10 md:gap-0"
         >
@@ -149,14 +152,14 @@ class Home extends HTMLElement {
           </li>
           <li class="w-full md-order-${item.order[1]} md:w-3/6">
             <img
-              class="w-full md:max-w-[500px] aspect-square md:min-h-[400px]"
+              class="w-full md:max-w-[500px] aspect-square md:min-h-[400px] fade-section"
               src="${item.img}"
               alt=""
             />
           </li>
           <li class="md-order-${item.order[2]} w-full md:w-2/6">
             <p
-              class="vlText-md md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
+              class="poem-line vlText-md md:leading-6 overflow-hidden md:ml-10 md:max-h-[400px] md:w-full md:max-w-[400px] text-[#8DA291] p-10 leading-15 md:leading-15 text-3xl md:text-lg"
             >
               ${articleContent}
             </p>
@@ -172,7 +175,7 @@ class Home extends HTMLElement {
           ${vlTextHtml(vlText, 2)}
         </div>
       </section>
-      <section class="max-w-content">
+      <section class="max-w-content fade-section">
         <product-item class="px-10 pb-20" itemInfo='${JSON.stringify(
           shopInfo
         )}'></product-item>
