@@ -41,7 +41,7 @@
 ---
 
 ## 🔗 參考資源
-
+- [線上展示網站](https://bakariclyclaris.github.io/HexSchool-GlassWeb.github.io/)
 - [Tailwind CSS 官方文件](https://tailwindcss.com/)
 - [GSAP 官方網站](https://greensock.com/gsap/)
 - [Web Components 官方說明](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
@@ -49,3 +49,4 @@
 ---
 
 > 歡迎參考、指教或提出 Issue！  
+
